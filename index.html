@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Testing Explained </title>
+
+<style>
+body {
+    background: #3a0126;
+    font-family: Comic Sans MS, Arial;
+    text-align: center;
+}
+
+h1 { color: #ffd1ef; }
+
+.cartoon {
+    font-size: 90px;
+    margin: 20px;
+    animation: pop 0.7s ease;
+}
+
+@keyframes pop {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+.card {
+    background: white;
+    width: 25%;
+    margin: auto;
+    padding: 45px;
+    border-radius: 20px;
+    font-size: 22px;
+    box-shadow: 0 0 12px #aaa;
+}
+
+button {
+    padding: 12px 28px;
+    margin-top: 20px;
+    font-size: 18px;
+    background: #b03693;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+button:hover { background: #dd97ce; }
+</style>
+</head>
+
+<body>
+
+<h1>Types of Testing  </h1>
+
+<div class="cartoon" id="img">👨‍🍳🍳</div>
+
+<div class="card" id="text">
+Done By:Sahana Fathima A<br>
+810723104087<br>
+BE CSE B sec
+</div>
+
+<button onclick="next()">Next ▶</button>
+
+<script>
+let step = 0;
+
+function next() {
+    step++;
+
+    if(step == 1) {
+        img.innerHTML = "🍔";
+        text.innerHTML = "<b>Unit Testing</b><br><br>I taste ONE food item 🍔";
+    }
+    else if(step == 2) {
+        img.innerHTML = "🍔➕🍟";
+        text.innerHTML = "<b>Integration Testing</b><br><br>I taste Burger 🍔 + Fries 🍟<br>";
+    }
+    
+    else if(step == 3) {
+        img.innerHTML = "🍽️🍔🍟🥤";
+        text.innerHTML = "<b>System Testing</b><br><br>I taste Complete meal 🍽️<br>";
+    }
+    else if(step == 4) {
+        img.innerHTML = "🔁🤔";
+        text.innerHTML = "<b>Regression Testing</b><br><br>New recipe added 🔁<br>Old taste still same?";
+    }
+    else
+    {
+        img.innerHTML = "😊👍";
+        text.innerHTML = "<b>Acceptance Testing</b><br><br>Customer eats food 😊<br>If happy → Approved!";
+    }
+    
+}
+</script>
+
+</body>
+</html>
+
